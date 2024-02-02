@@ -167,7 +167,7 @@ def filter_and_remove(dir_name,query, filter_size):
 
     print(f"[이미지 제거 개수: {filtered_count}/{scraped_count}]")
 
-
+#크롬과 관련된 부분
 options = ChromeOptions()
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
 options.add_argument('user-agent=' + user_agent)
