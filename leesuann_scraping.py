@@ -84,7 +84,7 @@ def click_and_save(dir_name, index, img, img_list_length):
             urlretrieve(src, dir_name + '/' + str(scraped_count+1) + ".jpg")
             print(f"{index+1}/{img_list_length} type 3 JPG 이미지 저장[총 {scraped_count+1}장]")
             scraped_count += 1
-            
+
     except NoSuchElementException as e:
         print(f"{index+1}/{img_list_length} click_and_save 함수 예외처리 : ",e)
         pass
@@ -168,8 +168,6 @@ def filter_and_remove(dir_name,query, filter_size):
     print(f"[이미지 제거 개수: {filtered_count}/{scraped_count}]")
 
 
-
-
 options = ChromeOptions()
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36"
 options.add_argument('user-agent=' + user_agent)
@@ -200,8 +198,3 @@ except:
 
 scraping(dir_name, query)
 filter_and_remove(dir_name,query, 400)
-
-
-
-
-
